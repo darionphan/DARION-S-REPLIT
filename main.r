@@ -1,4 +1,4 @@
-
+#datasets for the program, all the months from Feb 2019 - January 2020
 oakland_hot_temps_feb <- c(59, 59, 57, 53, 50, 54, 55, 54, 55, 52, 54, 53, 61, 60, 54, 55, 55, 58, 57 , 57, 58, 54, 56, 57, 57, 59, 56)
 oakland_hot_temps_mar <- c(56, 60, 57, 56, 59, 60, 55, 55, 55, 56, 64, 61, 63, 67, 67, 67, 71, 71, 67, 61, 62, 59, 62, 63, 63, 64, 62, 64, 63, 67, 71)
 oakland_hot_temps_apr <- c(63, 63, 61, 63, 62, 67, 70, 71, 67, 68, 64, 68, 74 ,62, 60, 64, 69, 85, 67, 61, 65, 72, 86, 79, 66, 71, 67, 64, 67, 64)
@@ -12,7 +12,7 @@ oakland_hot_temps_nov <- c(71,70, 75, 71, 70, 61, 60, 64, 60, 63, 72, 72, 61, 62
 oakland_hot_temps_dec <- c(57,61, 59, 58,59,66,63,61, 58, 59, 61, 63, 59, 59, 58, 60, 58, 57, 60, 57, 61, 57, 54, 56, 55, 58, 59, 58, 56, 57, 63)
 oakland_hot_temps_jan <- c(58,60, 60, 60, 58, 58, 57, 57, 57,57, 59, 55, 56, 57, 52, 52,55, 58, 56, 55)
 
-
+#aggregates the data into one variable
 oakland_hot_temps_both <- c(
 oakland_hot_temps_feb, 
 oakland_hot_temps_mar, 
@@ -28,7 +28,7 @@ oakland_hot_temps_dec,
 oakland_hot_temps_jan
 
 )
-
+#generic variables to demonstrate the different types of variables in R
 darion_is_cool <- 1738
 print(darion_is_cool)
 
@@ -38,7 +38,7 @@ print(really_cool_darion)
 private_twitter <- TRUE
 print(private_twitter)
 
-
+#prints out the standard deviation, mean, and median for the respective datasets
 print(sd(oakland_hot_temps_dec))
 print(mean(oakland_hot_temps_dec))
 print(median(oakland_hot_temps_dec))
@@ -60,7 +60,7 @@ print(median(oakland_hot_temps_both))
 #mean_of_data
 
 
-#this one is not mine, used for demonstrative purposes. 
+#this one is not mine, used for demonstrative purposes. Creates a box plot to show the data.
 boxplot(oakland_hot_temps_both, pch=15,
  main="Boxplot (oakland_hot_temps_both)" , 
  col = "lightblue",
@@ -86,6 +86,7 @@ barplot(oakland_hot_temps_both,
    col = 'purple', #Doesn't work for some reason??
    horiz = TRUE) #case where it works ,but it makes a bad graph worse
 
+#creates another boxplot
 boxplot(oakland_hot_temps_both, main="Boxplot of the Temperature Data",
  xlab="Temperature (Fahrenheit)",
  horizontal = TRUE, 
@@ -93,6 +94,7 @@ boxplot(oakland_hot_temps_both, main="Boxplot of the Temperature Data",
 
 
 ##Don't do this without context!!!!!!
+#creates a scatter plot that compares the position of the data with the temperature.
 dotchart(oakland_hot_temps_both,
 ylab = "Month, ascending from Feb 2019 to January 2020",
 xlab = 'Temperature (Fahrenheit)',
